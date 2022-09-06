@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 // 目录路径的配置
 const { resolve } = require('path')
 const cpns = resolve(__dirname, 'src/components')
-const views = resolve(__dirname, 'src/views')
+// const views = resolve(__dirname, 'src/views')
 module.exports = defineConfig({
   transpileDependencies: true,
   // lintOnSave: false
@@ -15,8 +15,8 @@ module.exports = defineConfig({
     },
     resolve: {
       alias: {
-        cpns,
-        views
+        cpns
+        // views
       }
     }
   }
