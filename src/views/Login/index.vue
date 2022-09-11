@@ -75,7 +75,7 @@ export default {
     },
     // 登陆
     async onSubmit() {
-      this.loading()
+      // this.loading()
       try {
         const { data } = await login(this.mobile, this.code)
         console.log(data)
@@ -83,7 +83,7 @@ export default {
         this.$router.push('/profile')
         this.$toast.success('登陆成功')
       } catch (error) {
-        // this.$toast.fail('登陆失败')
+        this.$toast.fail('登陆失败')
         // 密码，账号导致的错误
         if (error.response && error.response.status === 400) {
           this.$toast.fail(error.response.data.message)
@@ -93,8 +93,10 @@ export default {
           // 抛出错误
           throw error
         }
+        // alert('budui')
       }
     },
+
     async sendCode() {
       await this.$refs.form.validate('mobile')
       // console.log('发送请求')
