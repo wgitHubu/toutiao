@@ -7,7 +7,7 @@ const request = axios.create({
   baseURL: 'http://toutiao.itheima.net',
   timeout: 5000
 })
-
+// 请求拦截器
 request.interceptors.request.use(
   function (config) {
     const {

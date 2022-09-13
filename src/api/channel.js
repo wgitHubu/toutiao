@@ -12,3 +12,13 @@ export const getChannelAPI = () => {
     // }
   })
 }
+
+/**
+ * 获取所有频道
+ * @returns Promise
+ */
+export const getAllChannelsAPI = () => {
+  return request({
+    url: '/v1_0/channels'
+  })
+}
